@@ -1,0 +1,16 @@
+.jumbotron{
+  background-image: url('.../img/photo-132623234395-4222340d0c.jpg');
+  background-size: cover;
+  
+}
+.card-picture-top{
+  opacity: 0.7;
+  height: 200px;
+}
+
+.card-picture-top:hover{
+  opacity: 1.0;
+}
+.stars{
+  float: right;
+}

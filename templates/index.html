@@ -1,0 +1,31 @@
+{% extends 'main_template.html' %}
+
+{% block content %}
+    <!-- HERO -->
+    <div class="jumbotron text-center mt-4">
+      <h1 class="display-4">The best Library</h1>
+      <p class="lead">Для тих кого погода, надихає на читання</p>
+      <p class="mt-5 w-50 mx-auto">Книги на любу погоду...</p>
+    </div>
+    
+    <!-- CARDS -->
+
+    <div class="row mt-5" data-test="cards">
+
+      {% for id in keys %}
+        <div class="col-4" data-test="card">
+            <div class="card mb-3" >
+              <img src="{{ books[id].picture }}"  class="card-img-top" >
+            <div class="card-body">
+             <h5 class="card-title">{{ books[id].title}}<br> {{ books[id].autor }}</h5>
+             <p class="card-text">{{ books[id].description | truncate(100, end='') }}</p>
+                <a href="/books/{{ id }}" class="btn btn-sm btn-primary" > Детальніше</a>
+                </p>
+            </div>
+        </div>
+        </div>
+      {% endfor %}
+
+    </div>
+
+{% endblock %}

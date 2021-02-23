@@ -1,0 +1,20 @@
+{% extends 'book_template.html' %}
+
+{% block content %}
+   
+<div class="card" style="width: 18rem">
+    <img src="{{ picture }}"  class="card-img-top" >
+    <div class="card-body">
+        <h1 class="card-title">{{ title}} <h1>
+        <h5 class="card-title"> {{ autor }}</h5>
+    <div class="card-body">
+      <p class="card-text">
+        {{ description }}
+       </p>
+      <p class="card-text font-weight-bold">Рік видання: {{ year }} <br> ISDN:  {{ isdn }}  <br> Формат: {{ form }} <br>
+    </div>
+  </div>
+     
+
+   
+{% endblock %}

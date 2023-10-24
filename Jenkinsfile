@@ -25,20 +25,18 @@ pipeline {
         stage('Deploy our image') {
             steps {
                 script {
-                    docker.withRegistry( '', registryCredential ) {
-                        dockerImage.push()
-                    }
+                    sh "echo  $registry"
                 }
             }
         }
         stage('Cleaning up') {
             steps {
-                sh "docker rmi $registry"
+                sh "echo "Cleaning up""
             }
         }
         stage('SDG finish') {
             steps {
-                echo "Finish"
+                sh "echo "Finish""
             }
         }
     }

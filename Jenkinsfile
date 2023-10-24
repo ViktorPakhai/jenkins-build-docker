@@ -31,12 +31,12 @@ pipeline {
         }
         stage('Cleaning up') {
             steps {
-                sh "echo "Cleaning up""
+                sh "ls -la"
             }
         }
         stage('SDG finish') {
             steps {
-                sh "echo "Finish""
+                sh "touch finis.txt"
             }
         }
     }

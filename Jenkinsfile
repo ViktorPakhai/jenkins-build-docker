@@ -18,7 +18,7 @@ pipeline {
         stage('Building our image') {
             steps {
                 script {
-                    dockerImage = docker.build registry
+                    echo "Building our image stage"
                 }
             }
         }
